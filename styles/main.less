@@ -1,0 +1,223 @@
+@main-color: #007bff;
+@secondary-color: #0056b3;
+@border-color: #ccc;
+@shadow-color: rgba(0, 0, 0, 0.1);
+@border-radius: 5px;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+#header {
+    box-shadow: 0 10px 20px @shadow-color;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+
+    .container {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+
+        .menu {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+
+            .menu-item, .admin-indication {
+                margin: 0 30px;
+                color: white;
+                font-size: 18px;
+                text-decoration: none;
+            }
+
+            .admin-indication {
+                padding: 10px;
+                background: @main-color;
+                float: right;
+            }
+        }
+
+        .menu-item:hover {
+            border-bottom: 1px solid white;
+        }
+    }
+}
+
+h1.product-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid @border-color;
+    border-radius: @border-radius;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+}
+
+.btn-container {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+
+    a {
+        display: block;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: @main-color;
+        color: #fff;
+        border: none;
+        border-radius: @border-radius;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        min-width: 100px;
+
+        &:hover {
+            background-color: @secondary-color;
+        }
+    }
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: @border-radius;
+}
+
+.product-item h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.product-item p {
+    margin-top: 5px;
+}
+
+.product-item p.price {
+    font-weight: bold;
+}
+
+.login-container, .product-detail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 1px solid @border-color;
+    padding: 20px;
+    border-radius: @border-radius;
+    box-shadow: 0px 0px 10px @shadow-color;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid @border-color;
+    border-radius: @border-radius;
+}
+
+button[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: @main-color;
+    color: #fff;
+    border: none;
+    border-radius: @border-radius;
+    cursor: pointer;
+
+    &:hover {
+        background-color: @secondary-color;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+
+    .logo-letter {
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 42px;
+        color: @secondary-color;
+    }
+
+    .logo-text {
+        font-size: 30px;
+        color: white;
+        line-height: 30px;
+        margin-left: 5px;
+    }
+}
+
+.product-image {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.product-item-detailed {
+    min-width: 350px;
+}
+
+a.delete {
+    background: gray;
+}
+
+table {
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+    thead th {
+        font-weight: bold;
+        text-align: left;
+        border: none;
+        padding: 10px 15px;
+        background: #d8d8d8;
+        font-size: 14px;
+    }
+    tbody td {
+        text-align: left;
+        border: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        vertical-align: top;
+    }
+    tbody tr:nth-child(even){
+        background: #f3f3f3;
+    }
+}
+
+.error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-bottom: 10px;
+}

@@ -8,4 +8,4 @@ WORKDIR /var/www/html
 COPY . .
 EXPOSE 80
 RUN composer install
-CMD ["apache2-foreground"]
+CMD ["bash", "-c"]
